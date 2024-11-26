@@ -7,11 +7,6 @@ async function getVentas() {
     return ventas.data;
 
 }
-
-async function getproducto(params) {
-
-}
-
 export default async function Ventas() {
     const tabEncabezado = {
         padding: '10px',
@@ -37,8 +32,8 @@ export default async function Ventas() {
                         <th style={tabEncabezado}>Cantidad</th>
                         <th style={tabEncabezado}>Estado</th>
                         <th style={tabEncabezado}>Fecha/Hora</th>
-                        <th style={tabEncabezado}>Id_Producto</th>
-                        <th style={tabEncabezado}>Id_Usuario</th>
+                        <th style={tabEncabezado}>Producto</th>
+                        <th style={tabEncabezado}>Usuario</th>
                         <th style={tabEncabezado}>Borrar</th>
                     </tr>
                 </thead>
@@ -49,13 +44,13 @@ export default async function Ventas() {
                             <td style={tabstyle2}>{venta.cantidad}</td>
                             <td style={tabstyle2}>{venta.estado}</td>
                             <td style={tabstyle2}>{venta.fechayhora}</td>
-                            <td style={tabstyle2}>{venta.id_producto}</td>
-                            <td style={tabstyle2}>{venta.id_usuario}</td>
+                            <td style={tabstyle2}>{venta.producto}</td>
+                            <td style={tabstyle2}>{venta.usuario}</td>
                             <td style={tabstyle2}>
                                 <BorrarVenta id={venta.id} />
                                 <> / </>
-                                <Link href={`/ventas/modificar/${encodeURIComponent(JSON.stringify({ id: venta.id,cantidad:venta.cantidad}))}`}>
-                                Modificar</Link>
+                                <Link href={`/ventas/modificar/${encodeURIComponent(JSON.stringify({ id: venta.id, cantidad: venta.cantidad }))}`}>
+                                    Modificar</Link>
                             </td>
                         </tr>
                     ))}
