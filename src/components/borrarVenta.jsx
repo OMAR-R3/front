@@ -9,6 +9,6 @@ export default function borrarVennta({id}){
     }
 
     return(
-        <Link href="" onClick={borrar}>Borrar</Link>
+        <Link href="" onClick={borrar}>Cancelar</Link>
     );
 }

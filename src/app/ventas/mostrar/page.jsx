@@ -34,7 +34,7 @@ export default async function Ventas() {
                         <th style={tabEncabezado}>Fecha/Hora</th>
                         <th style={tabEncabezado}>Producto</th>
                         <th style={tabEncabezado}>Usuario</th>
-                        <th style={tabEncabezado}>Borrar</th>
+                        <th style={tabEncabezado}>Cancelar / Modificar</th>
                     </tr>
                 </thead>
                 <tbody>
